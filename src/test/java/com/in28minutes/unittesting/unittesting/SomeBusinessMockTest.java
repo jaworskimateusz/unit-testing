@@ -23,7 +23,6 @@ public class SomeBusinessMockTest {
 	@Mock
 	private SomeDataService dataServiceMock = mock(SomeDataService.class);
 	
-	
 	/* this is no needed when I use @InjectMocks annotation
 	@Before 
 	public void before( ) {
