@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.in28minutes.unittesting.model.Item;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 public class ItemController {
@@ -23,6 +25,11 @@ public class ItemController {
 	@GetMapping("/business-item")
 	public Item businessItem() {
 		return itemBusinessService.retrieveHardcodedItem();
+	}
+
+	@GetMapping("/all-items")
+	public List<Item> retrieveAllItems() {
+		return itemBusinessService.retrieveAllItems();
 	}
 	
 }

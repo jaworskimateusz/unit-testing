@@ -1,7 +1,13 @@
 package com.in28minutes.unittesting.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+@Entity
 public class Item {
 
+    @Id
 	private int id;
 
 	private String name;
@@ -9,6 +15,11 @@ public class Item {
 	private int price;
 
 	private int quantity;
+
+	@Transient
+	private int value;
+	// This annotation is used when we DO NOT want a particular variable of an class/object
+    // to be stored in the database table.
 
 	public Item() {}
 
@@ -49,6 +60,14 @@ public class Item {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
     @Override
