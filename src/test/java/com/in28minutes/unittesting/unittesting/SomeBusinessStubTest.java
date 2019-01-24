@@ -36,11 +36,4 @@ public class SomeBusinessStubTest {
 		assertEquals(6, business.calculateSumUsingDataService());
 	}
 	
-	@Test
-	public void calculateSumUsingDataService_empty() {
-		SomeBusinessImpl business = new SomeBusinessImpl();
-		business.setSomeDataService(new SomeDataServiceEmptyStub());
-		assertEquals(6, business.calculateSumUsingDataService());
-	}
-	
 }
